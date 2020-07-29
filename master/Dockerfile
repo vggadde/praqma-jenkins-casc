@@ -3,6 +3,7 @@ FROM jenkins/jenkins:2.222.4
 
 LABEL maintainer="ewe@praqma.net"
 COPY plugins_extra.txt /usr/share/jenkins/ref/plugins_extra.txt
+USER root
 RUN apt-get install -y curl \
   && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
   && apt-get install -y nodejs \
