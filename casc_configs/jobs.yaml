@@ -1,5 +1,2 @@
 jobs:
   - url: https://raw.githubusercontent.com/vggadde/content-weather-app/master/pipeline.dsl #casc
- # - file: /var/jenkins_conf/jobs.groovy
-  - script: >
-      job('Sample NodeJS App')
