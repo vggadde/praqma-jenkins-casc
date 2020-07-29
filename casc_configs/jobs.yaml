@@ -1,5 +1,5 @@
 jobs:
-  - url: https://raw.githubusercontent.com/Praqma/job-dsl-collection/master/configuration-as-code-dsl/pipeline.dsl #casc
+  - url: https://raw.githubusercontent.com/vggadde/content-weather-app/master/pipeline.dsl #casc
  # - file: /var/jenkins_conf/jobs.groovy
   - script: >
-      job('123456')
+      job('Sample NodeJS App')
