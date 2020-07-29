@@ -1,10 +1,12 @@
-FROM node as nodejs
 
 FROM jenkins/jenkins:2.222.4
 
 LABEL maintainer="ewe@praqma.net"
 COPY plugins_extra.txt /usr/share/jenkins/ref/plugins_extra.txt
-COPY --from=nodejs /usr/local/bin/node /usr/local/bin/node
+RUN apt-get install -y curl \
+  && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
+  && apt-get install -y nodejs \
+  && curl -L https://www.npmjs.com/install.sh | sh
 
 ENV JENKINS_HOME /var/jenkins_home
 
